@@ -21,9 +21,9 @@ describe('ThemeService', () => {
 
   it('setTheme should add value to theme obs and update local storage', () => {
     Object.defineProperty(window, 'localStorage', { value: { setItem: jest.fn() } });
-    service.currentTheme$ = { nest: jest.fn() } as any;
+    service.currentTheme$ = { next: jest.fn() } as any;
     service.setTheme('dark');
     expect(localStorage.setItem).toHaveBeenCalledWith(StorageKeys.ThemeName, 'dark');
-    expect(service.currentTheme$).toHaveBeenCalledWith('dark-theme');
+    expect(service.currentTheme$.next).toHaveBeenCalledWith('dark-theme');
   });
 });
