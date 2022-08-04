@@ -11,6 +11,6 @@ export class AppComponent {
   constructor(private themeService: ThemeService) { }
 
   get currentTheme() {
-    return this.themeService.currentTheme;
+    return this.themeService.currentTheme$;
   }
 }
