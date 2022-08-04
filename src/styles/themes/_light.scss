@@ -1,0 +1,27 @@
+@use '@angular/material' as mat;
+
+@use '../../app/auth/shared/auth-footer/auth-footer.component.scss' as auth-footer;
+@use '../../app/core/components/navbar/navbar.component.scss' as navbar;
+
+.light-theme {
+    min-height: 100vh;
+    background-color: #fafafa;
+
+    @include mat.core-color(map-get($loxabeat-light, 'material'));
+    @include mat.button-color(map-get($loxabeat-light, 'material'));
+    @include mat.form-field-color(map-get($loxabeat-light, 'material'));
+    @include mat.input-color(map-get($loxabeat-light, 'material'));
+    @include mat.snack-bar-color(map-get($loxabeat-light, 'material'));
+    @include mat.toolbar-color(map-get($loxabeat-light, 'material'));
+    @include mat.dialog-color(map-get($loxabeat-light, 'material'));
+    @include mat.list-color(map-get($loxabeat-light, 'material'));
+    @include mat.autocomplete-color(map-get($loxabeat-light, 'material'));
+    @include mat.progress-bar-color(map-get($loxabeat-light, 'material'));
+    @include mat.sidenav-color(map-get($loxabeat-light, 'material'));
+    @include mat.menu-color(map-get($loxabeat-light, 'material'));
+    @include mat.checkbox-color(map-get($loxabeat-light, 'material'));
+    @include mat.tabs-color(map-get($loxabeat-light, 'material'));
+
+    @include auth-footer.light-color(map-get($loxabeat-light, 'material'));
+    @include navbar.light-color(map-get($loxabeat-light, 'material'));
+}
