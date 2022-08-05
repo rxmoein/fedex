@@ -44,15 +44,6 @@ export class SigninComponent {
       const request$ = this.authService.login(this.form.value.username, this.form.value.password);
       const response = await lastValueFrom(request$);
 
-      this.authService.updateToken(response.result.token);
-      this.authService.updateLocalUser({
-        id: response.result.user.id,
-        firstName: response.result.user.first_name,
-        lastName: response.result.user.last_name,
-        roleId: response.result.user.role_id,
-        status: response.result.user.status,
-        username: response.result.user.username,
-      });
       this.isLoading = false;
       this.form.enable();
 
@@ -61,7 +52,7 @@ export class SigninComponent {
         return;
       }
 
-      this.router.navigate(['u', this.authService.getUsername()]);
+      this.snackbar.info('You just logged in!');
     } catch (error) {
       this.form.enable();
       this.isLoading = false;
