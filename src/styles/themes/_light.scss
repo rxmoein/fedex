@@ -1,7 +1,6 @@
 @use '@angular/material' as mat;
 
 @use '../../app/auth/shared/auth-footer/auth-footer.component.scss' as auth-footer;
-@use '../../app/core/components/navbar/navbar.component.scss' as navbar;
 
 .light-theme {
     min-height: 100vh;
@@ -23,5 +22,4 @@
     @include mat.tabs-color(map-get($loxabeat-light, 'material'));
 
     @include auth-footer.light-color(map-get($loxabeat-light, 'material'));
-    @include navbar.light-color(map-get($loxabeat-light, 'material'));
 }

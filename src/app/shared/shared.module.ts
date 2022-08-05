@@ -23,6 +23,8 @@ import { MaterialModule } from './material/material.module';
   ],
   exports: [
     FormsModule,
+    RouterModule,
+    MaterialModule,
     ReactiveFormsModule,
     NavbarOptionDirective,
   ]

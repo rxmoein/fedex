@@ -1,7 +1,5 @@
 @use '@angular/material' as mat;
 @use '../../app/auth/shared/auth-footer/auth-footer.component.scss' as auth-footer;
-@use '../../app/core/components/navbar/navbar.component.scss' as navbar;
-
 
 @include mat.core();
 $loxabeat-light: create-light-loxabeat-theme($lb-blue-grey-palette, $lb-blue-grey-palette, $lb-red-palette, 'light');
@@ -24,4 +22,3 @@ $loxabeat-dark: create-dark-loxabeat-theme($lb-amber-palette, $lb-blue-grey-pale
 @include mat.tabs-theme(map-get($loxabeat-dark, 'material'));
 
 @include auth-footer.theme(map-get($loxabeat-dark, 'material'));
-@include navbar.theme(map-get($loxabeat-dark, 'material'));

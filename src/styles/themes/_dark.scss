@@ -1,7 +1,6 @@
 @use '@angular/material' as mat;
 
 @use '../../app/auth/shared/auth-footer/auth-footer.component.scss' as auth-footer;
-@use '../../app/core/components/navbar/navbar.component.scss' as navbar;
 
 .dark-theme {
     color: rgba(#fff, 0.95);
@@ -49,5 +48,4 @@
     @include mat.tabs-color(map-get($loxabeat-dark, 'material'));
 
     @include auth-footer.dark-color(map-get($loxabeat-dark, 'material'));
-    @include navbar.dark-color(map-get($loxabeat-dark, 'material'));
 }
